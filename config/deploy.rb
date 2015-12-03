@@ -28,8 +28,8 @@ namespace :webfaction do
 				# pull the code and get rid of any changes						
 				execute "cd #{tmp_full_app_path} && git config --global user.email \"josiahrachaelbenji@gmail.com\""
 				execute "cd #{tmp_full_app_path} && git config --global user.name \"Josiah\""
-				# execute "cd #{tmp_full_app_path} && git stash save --keep-index"
-				# execute "cd #{tmp_full_app_path} && git stash drop"
+				execute "cd #{tmp_full_app_path} && git stash save --keep-index"
+				execute "cd #{tmp_full_app_path} && git stash drop"
 				execute "cd #{tmp_full_app_path} && git pull #{repo_url}"
 
 				# update the gems
