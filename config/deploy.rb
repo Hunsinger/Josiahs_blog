@@ -5,7 +5,7 @@ require "whenever/capistrano"
 
 set :application, 'blog'
 set :repo_url, 'https://Hunsinger:Chelsea1024@github.com/Hunsinger/Js_blog.git'
-set :deploy_to, '/home/josiahs_blog/webapps'
+set :deploy_to, '/home/eneifert/webapps'
 
 set :app_path, -> { fetch(:env_app_path) }
 set :full_app_path, -> { "#{deploy_to}/#{fetch(:env_app_path)}" }
