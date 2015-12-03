@@ -10,9 +10,9 @@ set :deploy_to, '/home/eneifert/webapps'
 set :app_path, -> { fetch(:env_app_path) }
 set :full_app_path, -> { "#{deploy_to}/#{fetch(:env_app_path)}" }
 
-role :web, "josiah@web491.webfaction.com"
-role :app, "josiah@web491.webfaction.com"
-role :db,  "josiah@web491.webfaction.com", :primary => true 
+role :web, "eneifert@web491.webfaction.com"
+role :app, "eneifert@web491.webfaction.com"
+role :db,  "eneifert@web491.webfaction.com", :primary => true 
 
 namespace :webfaction do 
 
@@ -20,7 +20,7 @@ namespace :webfaction do
 		on roles(:app) do			
 			[{dir: "josiahs_blog", env: "production"}].each do |item|
 				tmp_deploy_to = "#{deploy_to}/#{item[:dir]}"
-				tmp_full_app_path = "#{tmp_deploy_to}/josiahs_blog"
+				tmp_full_app_path = "#{tmp_deploy_to}/Josiahs_blog"
 
 				# set up the path variables
 				env_var_cmd = "cd #{tmp_deploy_to} && export PATH=$PWD/bin:$PATH && export GEM_HOME=$PWD/gems && export RUBYLIB=$PWD/lib &&"	      	      
@@ -28,8 +28,8 @@ namespace :webfaction do
 				# pull the code and get rid of any changes						
 				execute "cd #{tmp_full_app_path} && git config --global user.email \"josiahrachaelbenji@gmail.com\""
 				execute "cd #{tmp_full_app_path} && git config --global user.name \"Josiah\""
-				execute "cd #{tmp_full_app_path} && git stash save --keep-index"
-				execute "cd #{tmp_full_app_path} && git stash drop"
+				# execute "cd #{tmp_full_app_path} && git stash save --keep-index"
+				# execute "cd #{tmp_full_app_path} && git stash drop"
 				execute "cd #{tmp_full_app_path} && git pull #{repo_url}"
 
 				# update the gems
