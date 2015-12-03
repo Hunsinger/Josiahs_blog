@@ -35,7 +35,14 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem "better_errors", "~> 1.1.0"
+group :development do
+  gem 'better_errors', '~> 1.1.0'
+  gem "letter_opener"
+  gem 'byebug'  
+
+  gem 'capistrano'
+  gem 'capistrano-rails'
+end
 
 gem "binding_of_caller"
 
