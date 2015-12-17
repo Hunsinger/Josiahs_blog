@@ -48,7 +48,7 @@ group :development do
   gem "binding_of_caller"
 end
 
-
+gem "whenever", :require => false
 
 gem 'devise'
 
