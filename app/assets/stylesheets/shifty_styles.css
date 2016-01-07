@@ -1,0 +1,145 @@
+body {
+	background-color: #ffd07D;
+}
+
+.centered {
+	margin-left: 375px;
+}
+
+.center {
+	background-color: white;
+	float: none;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.scoring {
+	border: solid 2px #C53CFF;
+	line-height: 50px;
+	border-radius: 10px;
+	margin-top: 20px;
+	font-size: 120%;
+}
+
+.instr {
+	border-radius: 10px;
+	line-height: 30px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+.cover, .finish {
+	background-color: #ccc;
+	text-align: center;
+	height: 310px;
+	line-height: 310px;
+	font-size: 300%;
+	margin-top: -9px;
+}
+
+.finish {
+	display: none;
+	margin-top: -321px;
+	color: #E82416;
+	opacity: 0.75;
+	filter: alpha(opacity=75);
+}
+
+.bottom_margin {
+	margin-bottom: 20px;
+}
+
+.box {
+	display: none;
+	background-color: #3C45FF;
+	color: #ACE80A;
+	font-size: 200%;
+	text-align: center;
+	border: solid 2px gray;
+	line-height: 80px;
+	border-radius: 5px;
+}
+
+.none_box {
+	display: none;
+	background-color: gray;
+	font-size: 200%;
+	text-align: center;
+	border: solid 2px gray;
+	line-height: 80px;
+	border-radius: 5px;
+}
+
+.button{
+	text-decoration:none;
+	text-align:center; 
+	padding:11px 32px; 
+	border:solid 1px #ffa930; 
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px; 
+	border-radius: 4px; 
+	font:20px "Lucida Console", Monaco, monospace; 
+	font-weight:bold; 
+	color:#e82416; 
+	background-color:#ffa930; 
+	background-image: -moz-linear-gradient(top, #ffa930 0%, #fab350 100%); 
+	background-image: -webkit-linear-gradient(top, #ffa930 0%, #fab350 100%); 
+	background-image: -o-linear-gradient(top, #ffa930 0%, #fab350 100%); 
+	background-image: -ms-linear-gradient(top, #ffa930 0% ,#fab350 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fab350', endColorstr='#fab350',GradientType=0 ); 
+	background-image: linear-gradient(top, #ffa930 0% ,#fab350 100%);   
+	-webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff; 
+	-moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;  
+	box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;  
+	display: none;
+	position: relative;
+	top: 10px;
+}
+
+.button:hover {
+	padding:11px 32px; 
+	border:solid 1px #ffa930; 
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px; 
+	border-radius: 4px; 
+	font:20px "Lucida Console", Monaco, monospace; 
+	font-weight:bold; 
+	color:#e82416; 
+	background-color:#ffa930; 
+	background-image: -moz-linear-gradient(top, #ffa930 0%, #fab350 100%); 
+	background-image: -webkit-linear-gradient(top, #ffa930 0%, #fab350 100%); 
+	background-image: -o-linear-gradient(top, #ffa930 0%, #fab350 100%); 
+	background-image: -ms-linear-gradient(top, #ffa930 0% ,#fab350 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fab350', endColorstr='#fab350',GradientType=0 ); 
+	background-image: linear-gradient(top, #ffa930 0% ,#fab350 100%);   
+	-webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff; 
+	-moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;  
+	box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;  
+}
+
+.button:active {
+	padding:11px 32px; 
+	border:solid 1px #ffa930; 
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px; 
+	border-radius: 4px; 
+	font:20px "Lucida Console", Monaco, monospace; 
+	font-weight:bold; 
+	color:#e82416; 
+	background-color:#ffa930; 
+	background-image: -moz-linear-gradient(top, #ffa930 0%, #fab350 100%); 
+	background-image: -webkit-linear-gradient(top, #ffa930 0%, #fab350 100%); 
+	background-image: -o-linear-gradient(top, #ffa930 0%, #fab350 100%); 
+	background-image: -ms-linear-gradient(top, #ffa930 0% ,#fab350 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fab350', endColorstr='#fab350',GradientType=0 ); 
+	background-image: linear-gradient(top, #ffa930 0% ,#fab350 100%);   
+	-webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff; 
+	-moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;  
+	box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;  
+}
+
+.shifty_container {
+	margin-top: 45px;
+	height: 100vh;
+	margin-bottom: 45px;
+}
