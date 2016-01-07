@@ -1,4 +1,8 @@
-$(function(){
+var app_ready;
+
+app_ready = function(){
+	
+	$(function(){
 	var start_time;
 	var clicks = 0;
 	var Timer;
@@ -81,3 +85,9 @@ $(function(){
 		return isInOrder
 	};
 });
+
+};
+
+$(document).ready(app_ready);
+$(document).on('page:load', app_ready);
+
