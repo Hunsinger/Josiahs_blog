@@ -10,9 +10,9 @@ set :deploy_to, '/home/eneifert/webapps'
 set :app_path, -> { fetch(:env_app_path) }
 set :full_app_path, -> { "#{deploy_to}/#{fetch(:env_app_path)}" }
 
-role :web, "eneifert@web491.webfaction.com"
-role :app, "eneifert@web491.webfaction.com"
-role :db,  "eneifert@web491.webfaction.com", :primary => true 
+role :web, "eneifert@wf-178-79-142-229.webfaction.com"
+role :app, "eneifert@wf-178-79-142-229.webfaction.com"
+role :db,  "eneifert@wf-178-79-142-229.webfaction.com", :primary => true 
 
 namespace :webfaction do 
 
