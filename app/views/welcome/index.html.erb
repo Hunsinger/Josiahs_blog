@@ -25,16 +25,19 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4 portfolio-item">
-                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+            <div class="col-sm-4 col-sm-offset-2 portfolio-item">
+                <%= link_to shifty_path, class: "portfolio-link" do %>
                     <div class="caption">
                         <div class="caption-content">
                             <i class="fa fa-search-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img src="/assets/portfolio/cabin.png" class="img-responsive" alt="">
-                </a>
+                    <img src="/assets/portfolio/game.png" class="img-responsive" alt="">
+                <% end %>
     		</div>
+            <div class="col-sm-4" style="text-align: center; padding-top: 80px;">
+                <p>A game that I created to help learn javascript and jquery. Click the numbers to shift them around. See if you can get the lowest score.</p>
+            </div>
         </div>
     </div>
 </section>
