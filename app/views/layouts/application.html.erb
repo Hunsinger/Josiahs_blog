@@ -75,9 +75,14 @@
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-<div class="container margin_container">
+
+<% if @skip_container %>
     <%= yield %>
-</div>
+<% else %>
+    <div class="container margin_container">
+        <%= yield %>
+    </div>
+<% end %>
 
 <!-- Footer -->
 <footer class="text-center">
