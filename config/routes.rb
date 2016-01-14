@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'shifty' => 'welcome#shifty', as: :shifty
   get 'about' => 'welcome#about', as: :about
+  post 'contact' => 'welcome#contact', as: :contact
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
