@@ -8,6 +8,5 @@ class WelcomeController < ApplicationController
   end
 
   def contact
-  	debug
   end
 end
