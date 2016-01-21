@@ -49,6 +49,7 @@ group :development do
 end
 
 gem "whenever", :require => false
+gem 'honeypot-captcha'
 
 gem 'devise'
 
