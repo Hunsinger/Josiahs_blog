@@ -22,6 +22,10 @@
 <% end %>
 
 <nav class="navbar navbar-default navbar-fixed-top">
+
+    <% if !flash[:success].blank? %>
+        <div class="alert alert-success" role="alert"><%= flash[:success] %></div>
+    <% end %>
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
