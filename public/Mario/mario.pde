@@ -6,7 +6,8 @@ float ACCELERATION = 1.3;
 float DAMPENING = 0.75;
 
 void initialize() {
-  addScreen("level", new MarioLevel(width, height));  
+  addScreen("level", new MarioLevel(width, height));
+  frameRate(30);
 }
 
 class MarioLevel extends Level {
@@ -61,8 +62,22 @@ class Mario extends Player {
   }
 
   void handleInput() {
-    if (isKeyDown(left)) { addImpulse(-2, 0); }
-    if (isKeyDown(right)) { addImpulse(2, 0); }
-    if (isKeyDown(up)) { addImpulse(0,-10); }
+    if (isKeyDown(left)) {
+      setHorizontalFlip(true);
+      addImpulse(-2, 0);
+      setCurrentState("running");
+      }
+    if (isKeyDown(right)) {
+      setHorizontalFlip(false);
+      addImpulse(2, 0);
+      setCurrentState("running");
+      }
+    if (isKeyDown(up) && active.name!="jumping" && boundaries.size()>0) {
+      addImpulse(0,-35);
+      setCurrentState("jumping");
+      }
+    if (!isKeyDown(left) && !isKeyDown(right) && !isKeyDown(up)) {
+      setCurrentState("idle");
+    }
   }
 }
