@@ -15,10 +15,6 @@ void addScreen(String name, Screen screen) {
                   graphics/Running-mario.gif,
                   graphics/Jumping-mario.gif,
                   graphics/Dead-mario.gif,
-                  graphics/Standing-luigi1.gif,
-                  graphics/Running-luigi1.gif,
-                  graphics/Jumping-luigi1.gif,
-                  graphics/Dead-luigi1.gif,
                   graphics/sky.gif,
                   graphics/sky_2.gif,
                   graphics/ground-top.gif,
@@ -27,4 +23,11 @@ void addScreen(String name, Screen screen) {
                   graphics/ground-corner-left.gif,
                   graphics/ground-corner-right.gif,
                   graphics/ground-side-left.gif,
-                  graphics/ground-side-right.gif; */
+                  graphics/ground-side-right.gif,
+                  graphics/Regular-coin.gif,
+                  graphics/Dragon-coin.gif,
+                  graphics/Red-koopa-walking.gif,
+                  graphics/Naked-koopa-walking.gif,
+                  graphics/Goal-back.gif,
+                  graphics/Goal-front.gif,
+                  graphics/Goal-slider.gif; */
