@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
   get 'shifty' => 'welcome#shifty', as: :shifty
+  get 'mario' => 'welcome#mario', as: :mario
   get 'about' => 'welcome#about', as: :about
   post 'contact' => 'welcome#contact', as: :contact
 
