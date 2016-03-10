@@ -9,25 +9,25 @@ void addScreen(String name, Screen screen) {
 }
 
 /* @pjs pauseOnBlur="true";
-        font="fonts/acmesa.ttf";
+        font="Mario/fonts/acmesa.ttf";
         preload=" 
-                  graphics/Standing-mario.gif,
-                  graphics/Running-mario.gif,
-                  graphics/Jumping-mario.gif,
-                  graphics/Dead-mario.gif,
-                  graphics/sky.gif,
-                  graphics/sky_2.gif,
-                  graphics/ground-top.gif,
-                  graphics/ground-filler.gif,
-                  graphics/ground-slant.gif,
-                  graphics/ground-corner-left.gif,
-                  graphics/ground-corner-right.gif,
-                  graphics/ground-side-left.gif,
-                  graphics/ground-side-right.gif,
-                  graphics/Regular-coin.gif,
-                  graphics/Dragon-coin.gif,
-                  graphics/Red-koopa-walking.gif,
-                  graphics/Naked-koopa-walking.gif,
-                  graphics/Goal-back.gif,
-                  graphics/Goal-front.gif,
-                  graphics/Goal-slider.gif; */
+                  Mario/graphics/Standing-mario.gif,
+                  Mario/graphics/Running-mario.gif,
+                  Mario/graphics/Jumping-mario.gif,
+                  Mario/graphics/Dead-mario.gif,
+                  Mario/graphics/sky.gif,
+                  Mario/graphics/sky_2.gif,
+                  Mario/graphics/ground-top.gif,
+                  Mario/graphics/ground-filler.gif,
+                  Mario/graphics/ground-slant.gif,
+                  Mario/graphics/ground-corner-left.gif,
+                  Mario/graphics/ground-corner-right.gif,
+                  Mario/graphics/ground-side-left.gif,
+                  Mario/graphics/ground-side-right.gif,
+                  Mario/graphics/Regular-coin.gif,
+                  Mario/graphics/Dragon-coin.gif,
+                  Mario/graphics/Red-koopa-walking.gif,
+                  Mario/graphics/Naked-koopa-walking.gif,
+                  Mario/graphics/Goal-back.gif,
+                  Mario/graphics/Goal-front.gif,
+                  Mario/graphics/Goal-slider.gif; */

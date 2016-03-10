@@ -3089,8 +3089,8 @@ static class SoundManager {
   static void init(PApplet _sketch) { 
     sketch = _sketch;
     owners = new HashMap<Object,AudioPlayer>();
-    mute_overlay = sketch.loadImage("mute.gif");
-    unmute_overlay = sketch.loadImage("unmute.gif");
+    mute_overlay = sketch.loadImage("Mario/mute.gif");
+    unmute_overlay = sketch.loadImage("Mario/unmute.gif");
     volume_overlay = (muted ? unmute_overlay : mute_overlay);
     minim = new Minim(sketch); 
     reset();

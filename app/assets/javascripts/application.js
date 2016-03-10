@@ -19,4 +19,6 @@
 //= require jqBootstrapValidation
 //= require freelancer
 //= require turbolinks
+//= require processing
+//= require processing-lazyload
 //= require_tree .

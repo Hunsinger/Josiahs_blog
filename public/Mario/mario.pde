@@ -28,7 +28,7 @@ class BackgroundLayer extends LevelLayer {
   BackgroundLayer(Level owner) {
     super(owner, owner.width, owner.height, 0,0, 0.75,0.75);
     setBackgroundColor(color(0, 100, 190));
-    addBackgroundSprite(new TilingSprite(new Sprite("graphics/sky_2.gif"),0,0,width,height));
+    addBackgroundSprite(new TilingSprite(new Sprite("Mario/graphics/sky_2.gif"),0,0,width,height));
   }
 }
 
@@ -36,11 +36,10 @@ class MarioLayer extends LevelLayer {
   Mario mario;
   MarioLayer(Level owner) {
     super(owner);
-    addBackgroundSprite(new TilingSprite(new Sprite("graphics/sky.gif"),0,0,width,height));
+    addBackgroundSprite(new TilingSprite(new Sprite("Mario/graphics/sky.gif"),0,0,width,height));
     addBoundary(new Boundary(0,height-48,width,height-48));
     addBoundary(new Boundary(-1,0, -1,height));
     addBoundary(new Boundary(width+1,height, width+1,0));
-    showBoundaries = true;
 
     mario = new Mario(32, height-64);
     addPlayer(mario);
@@ -69,15 +68,15 @@ class MarioLayer extends LevelLayer {
   }
 
   void addGround(float x1, float y1, float x2, float y2) {
-    TilingSprite groundline = new TilingSprite(new Sprite("graphics/ground-top.gif"), x1,y1,x2,y1+16);
+    TilingSprite groundline = new TilingSprite(new Sprite("Mario/graphics/ground-top.gif"), x1,y1,x2,y1+16);
     addBackgroundSprite(groundline);
-    TilingSprite groundfiller = new TilingSprite(new Sprite("graphics/ground-filler.gif"), x1,y1+16,x2,y2);
+    TilingSprite groundfiller = new TilingSprite(new Sprite("Mario/graphics/ground-filler.gif"), x1,y1+16,x2,y2);
     addBackgroundSprite(groundfiller);
     addBoundary(new Boundary(x1,y1,x2,y1));
   }
 
   void addSlant(float x, float y) {
-    Sprite groundslant = new Sprite("graphics/ground-slant.gif");
+    Sprite groundslant = new Sprite("Mario/graphics/ground-slant.gif");
     groundslant.align(LEFT, BOTTOM);
     groundslant.setPosition(x, y);
     addBackgroundSprite(groundslant);
@@ -85,20 +84,20 @@ class MarioLayer extends LevelLayer {
   }
 
   void addGroundPlatform(float x, float y, float w, float h) {
-    Sprite lc = new Sprite("graphics/ground-corner-left.gif");
+    Sprite lc = new Sprite("Mario/graphics/ground-corner-left.gif");
     lc.align(LEFT, TOP);
     lc.setPosition(x, y);
-    Sprite tp = new Sprite("graphics/ground-top.gif");
-    Sprite rc = new Sprite("graphics/ground-corner-right.gif");
+    Sprite tp = new Sprite("Mario/graphics/ground-top.gif");
+    Sprite rc = new Sprite("Mario/graphics/ground-corner-right.gif");
     rc.align(LEFT, TOP);
     rc.setPosition(x+w-rc.width, y);
     TilingSprite toprow = new TilingSprite(tp, x+lc.width, y, x+(w-rc.width), y+tp.height);
     addBackgroundSprite(lc);
     addBackgroundSprite(toprow);
     addBackgroundSprite(rc);
-    TilingSprite sideleft  = new TilingSprite(new Sprite("graphics/ground-side-left.gif"), x, y+tp.height, x+lc.width, y+h);
-    TilingSprite filler    = new TilingSprite(new Sprite("graphics/ground-filler.gif"), x+lc.width, y+tp.height, x+(w-rc.width), y+h);
-    TilingSprite sideright = new TilingSprite(new Sprite("graphics/ground-side-right.gif"), x+w-rc.width, y+tp.height, x+w, y+h);
+    TilingSprite sideleft  = new TilingSprite(new Sprite("Mario/graphics/ground-side-left.gif"), x, y+tp.height, x+lc.width, y+h);
+    TilingSprite filler    = new TilingSprite(new Sprite("Mario/graphics/ground-filler.gif"), x+lc.width, y+tp.height, x+(w-rc.width), y+h);
+    TilingSprite sideright = new TilingSprite(new Sprite("Mario/graphics/ground-side-right.gif"), x+w-rc.width, y+tp.height, x+w, y+h);
     addBackgroundSprite(sideleft);
     addBackgroundSprite(filler);
     addBackgroundSprite(sideright);
@@ -113,12 +112,12 @@ class MarioLayer extends LevelLayer {
   }
 
   void addGoal(float xpos, float hpos) {
-    Sprite back_post = new Sprite("graphics/Goal-back.gif");
+    Sprite back_post = new Sprite("Mario/graphics/Goal-back.gif");
     back_post.align(CENTER, BOTTOM);
     back_post.setPosition(xpos, hpos);
     addBackgroundSprite(back_post);
 
-    Sprite front_post = new Sprite("graphics/Goal-front.gif");
+    Sprite front_post = new Sprite("Mario/graphics/Goal-front.gif");
     front_post.align(CENTER, BOTTOM);
     front_post.setPosition(xpos+32, hpos);
     addForegroundSprite(front_post);
@@ -147,19 +146,19 @@ class Mario extends Player {
   }
 
   void setupStates() {
-    addState(new State("idle", "graphics/Standing-mario.gif")); 
-    addState(new State("running", "graphics/Running-mario.gif",1,4));
+    addState(new State("idle", "Mario/graphics/Standing-mario.gif")); 
+    addState(new State("running", "Mario/graphics/Running-mario.gif",1,4));
 
-    State jumping = new State("jumping", "graphics/Jumping-mario.gif");
+    State jumping = new State("jumping", "Mario/graphics/Jumping-mario.gif");
     jumping.setDuration(15);
     addState(jumping);
 
-    State dead = new State("dead", "graphics/Dead-mario.gif",1,2);
+    State dead = new State("dead", "Mario/graphics/Dead-mario.gif",1,2);
     dead.setAnimationSpeed(0.25);
     dead.setDuration(15);
     addState(dead);
 
-    State won = new State("won", "graphics/Standing-mario.gif");
+    State won = new State("won", "Mario/graphics/Standing-mario.gif");
     won.setDuration(15);
     addState(won);
 
@@ -249,19 +248,19 @@ class MarioPickup extends Pickup {
 
 class Coin extends MarioPickup {
   Coin(float x, float y) {
-    super("Regular coin", "graphics/Regular-coin.gif", 1, 4, x, y, true);
+    super("Regular coin", "Mario/graphics/Regular-coin.gif", 1, 4, x, y, true);
   }
 }
 
 class DragonCoin extends MarioPickup {
   DragonCoin(float x, float y) {
-    super("Dragon coin", "graphics/Dragon-coin.gif", 1, 10, x, y, true);
+    super("Dragon coin", "Mario/graphics/Dragon-coin.gif", 1, 10, x, y, true);
   }
 }
 
 class Rope extends MarioPickup {
   Rope(float x, float y) {
-    super("Finish line", "graphics/Goal-slider.gif", 1, 1, x, y, true);
+    super("Finish line", "Mario/graphics/Goal-slider.gif", 1, 1, x, y, true);
     Sprite rope_sprite = getState("Finish line").sprite;
     rope_sprite.align(LEFT, TOP);
     rope_sprite.addPathLine(0,0,1,1,0,0,-116,1,1,0,50);
@@ -281,11 +280,11 @@ class Koopa extends Interactor {
   }
 
   void setStates() {
-    State walking = new State("idle", "graphics/Red-koopa-walking.gif", 1, 2);
+    State walking = new State("idle", "Mario/graphics/Red-koopa-walking.gif", 1, 2);
     walking.setAnimationSpeed(0.12);
     addState(walking);
 
-    State noshell = new State("noshell", "graphics/Naked-koopa-walking.gif", 1, 2);
+    State noshell = new State("noshell", "Mario/graphics/Naked-koopa-walking.gif", 1, 2);
     noshell.setAnimationSpeed(0.12);
     addState(noshell);
 
